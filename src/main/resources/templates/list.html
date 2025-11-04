@@ -1,0 +1,25 @@
+<!-- customers/list.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Customers</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+<h1>Lista de Games</h1>
+<table>
+  <tr><th>ID</th><th>Título</th><th>Editora</th><th>Gênero</th><th>Ano</th></tr>
+  <tr th:each="game : ${games}">
+    <td th:text="${game.idGame}">
+    <td th:text="${game.titulo}">
+    <td th:text="${game.editora}">
+    <td th:text="${game.genero}">
+    <td th:text="${game.anoLancamento}">
+  </tr>
+</table>
+<p></p>
+<a href="/view/games/create">Registrar Game</a>
+<p></p>
+<a th:href="@{/}">Home</a>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!-- customers/create.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Registrar Game</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+<h1>Registrar Game</h1>
+<form th:action="@{/view/games/create}" method="post">
+  <label>Título: <input type="text" name="titulo" /></label><br/>
+  <p></p>
+
+  <label>Editor: <input type="text" name="editora" /></label><br/>
+  <p></p>
+
+  <label>Gênero: <input type="text" name="genero" /></label><br/>
+  <p></p>
+
+  <label>Ano: <input type="text" name="anoLancamento" /></label><br/>
+  <p></p>
+  <button type="submit">Salvar</button>
+</form>
+<p></p>
+<a th:href="@{/}">Home</a>
+</body>
+</html>
